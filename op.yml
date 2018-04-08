@@ -1,0 +1,13 @@
+name: github.com/opspec-pkgs/opspec.v0.1.6.op.validate
+description: validates a v0.1.6 [opspec](https://opspec.io) op
+inputs:
+  op:
+    dir:
+      description: op to validate
+version: 1.0.0
+run:
+  container:
+    cmd: [ opctl, op, validate, /op ]
+    dirs:
+      /op: $(op)
+    image: { ref: 'opctl/opctl:0.1.24' }
