@@ -5,6 +5,7 @@ inputs:
     dir:
       description: op to validate
 version: 1.0.0
+opspec: 0.1.6
 run:
   container:
     cmd: [ opctl, op, validate, /op ]
